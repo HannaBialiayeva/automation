@@ -27,17 +27,10 @@ public class Calculator {
                 resultOfOperation = subtractNumbers(number1, number2);
                 System.out.println("Result of operation: " + resultOfOperation);
                 break;
-            case "":
-                try {
-                    throw new WrongDataGettingException("Incorrect data was entered." +
-                            "Please,restart program!");
-                } catch (WrongDataGettingException exception) {
-                    System.out.println(exception.getMessage());
-                }
-                break;
             default:
-                System.out.println("Invalid operator! Please, restart the program");
-                break;
+                throw new WrongDataGettingException("Exception thrown: Incorrect operation was entered." +
+                    " Use available operators: +, -, *, / and restart the program!");
+
         }
         return resultOfOperation;
     }

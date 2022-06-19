@@ -2,11 +2,15 @@ package com.itacademy.calculator;
 
 import com.itacademy.calculator.exception.WrongDataGettingException;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
+
 import static com.itacademy.calculator.CalculatorUtilMethods.*;
+import static com.itacademy.calculator.CalculatorUtilMethods.divideNumbers;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CalculatorUtilMethodsTest {
-
+@Execution(ExecutionMode.CONCURRENT)
+public class CalculatorUtilMethodsSmokeTest {
     @Test
     public void testMultiplyNumbers() {
         assertEquals(6, multiplyNumbers(2, 3), "Incorrect result of multiplication!");
@@ -26,5 +30,4 @@ public class CalculatorUtilMethodsTest {
     public void testDivideNumbers() throws WrongDataGettingException {
         assertEquals(3, divideNumbers(30, 10), "Incorrect result of division!");
     }
-
 }
