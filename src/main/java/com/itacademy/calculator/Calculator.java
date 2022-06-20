@@ -34,6 +34,4 @@ public class Calculator {
         }
         return resultOfOperation;
     }
-
-
 }

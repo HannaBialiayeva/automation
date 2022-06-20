@@ -13,6 +13,5 @@ public class Main {
         double number2 = calculatorInputReader.getNumber();
         String operation = calculatorInputReader.getOperation();
         calculateNumbers(number1, number2, operation);
-
     }
 }

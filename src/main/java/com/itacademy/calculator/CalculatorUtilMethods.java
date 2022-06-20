@@ -26,5 +26,4 @@ public class CalculatorUtilMethods {
         double result = number1 * number2;
         return result;
     }
-
 }

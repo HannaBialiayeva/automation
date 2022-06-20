@@ -31,5 +31,4 @@ public class CalculatorInputMockitoDraftTest {
                 " Use available operators: +, -, *, / and restart the program!", ex.getMessage());
 
     }
-
 }
